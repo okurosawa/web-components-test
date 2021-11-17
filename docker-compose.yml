@@ -1,0 +1,12 @@
+
+version: '3.6'
+
+services:
+  app:
+    build: ./docker/node
+    container_name: web-components
+    tty: true
+    volumes:
+      - ./src/vue-web-components:/usr/src/app:cached
+    ports:
+      - "3000:3000"
